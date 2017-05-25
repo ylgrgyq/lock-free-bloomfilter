@@ -1,0 +1,15 @@
+[package]
+name = "lock_free_bloomfilter"
+version = "0.1.0"
+authors = ["ylgrgyq <alven.gr@gmail.com>"]
+license = "MIT/Apache-2.0"
+
+[dependencies]
+rand = "0.3"
+siphasher = "^0.2.2"
+clippy = {version = "~0", optional = true}
+
+[profile.release]
+lto = true
+panic = "abort"
+opt-level = 3
